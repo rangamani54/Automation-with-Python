@@ -1,0 +1,11 @@
+import os		
+volgrp = input("Enter volume group name: ")  
+os.system("vgdisplay {0}".format(volgrp))
+logvol=input("Enter the name of logical volume: ")
+size = input("Enter the incremental size(GB): ")
+os.system("lvextend --size +{}G /dev/{}/{}".format(size,volgrp,logvol))
+os.system("resize2fs /dev/{}/{}".format(volgrp,logvol))
+os.system("df -h")
+os.system("lvextend --size +{0}G {1}".format(size,logvol))
+os.system("resize2fs {}".format(volgrp))
+os.system("df -hT")
