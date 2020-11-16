@@ -20,8 +20,8 @@ while True :
 			os.system("python awsmenu.py")
 		elif "docker" in data or "container" in data:
 			os.system("python dr.py")
-		#elif "logical" in data and "volume" in data:
-			#os.system("python lvm.py")
+		elif "logical" in data and "volume" in data:
+			os.system("python lvm.py")
 		elif "extend" in data or "increase" in data and "logical" in data and "volume" in data:
 			os.system("python lvmextend.py")
 		else:
