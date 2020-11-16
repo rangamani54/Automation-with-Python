@@ -1,5 +1,5 @@
 import speech_recognition as sr
-import subprocess as sp
+#import subprocess as sp
 import pyttsx3
 import os
 print("\t\t\t\tHi, Iam your assistant")
